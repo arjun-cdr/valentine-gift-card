@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff0008, #301710);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    width: 390px;
+}
+
+h1 {
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    position: relative;
+    height: 60px;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: absolute;
+}
+
+#yes {
+    background: #ff4d6d;
+    color: #fff;
+    left: 40px;
+}
+
+#yes:hover {
+    background: #400e0e;
+}
+
+#no {
+    background: #ccc;
+    color: #333;
+    right: 40px;
+}
+
+.success {
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #b71432;
+    font-weight: 600;
+}
+
+.success {
+    display: none;
+    text-align: center;
+}
+
+body.accepted {
+    background: linear-gradient(135deg, #b97b7b, #ee9ca7);
+}
+
+body.accepted .card {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+body.accepted .card>h1,
+body.accepted .card>p,
+body.accepted .buttons {
+    display: none;
+}
+
+body.accepted .success {
+    display: block;
+}
+
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#rose {
+    display: inline-block;
+    animation: zoomEffect 1.5s infinite;
+}
